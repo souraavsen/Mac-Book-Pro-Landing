@@ -59,8 +59,7 @@ function Clicked(item) {
     if (ExtraMemoryCost.innerText != "0") {
       ExtraMemoryCost.innerText = "0";
     }
-    CalculateTotal(0);
-    // passing the price for adding in total
+    CalculateTotal();
   }
 
   // Checking if 16GB memory choosen
@@ -68,8 +67,7 @@ function Clicked(item) {
     if (ExtraMemoryCost.innerText != "180") {
       ExtraMemoryCost.innerText = "180";
     }
-    CalculateTotal(180);
-    // passing the price for adding in total
+    CalculateTotal();
   }
 
   // Checking if 256GB storage choosen
@@ -77,8 +75,7 @@ function Clicked(item) {
     if (ExtraStorageCost.innerText != "0") {
       ExtraStorageCost.innerText = "0";
     }
-    CalculateTotal(0);
-    // passing the price for adding in total
+    CalculateTotal();
   }
 
   // Checking if 500GB storage choosen
@@ -86,8 +83,7 @@ function Clicked(item) {
     if (ExtraStorageCost.innerText != "100") {
       ExtraStorageCost.innerText = "100";
     }
-    CalculateTotal(100);
-    // passing the price for adding in total
+    CalculateTotal();
   }
 
   // Checking if 1TB storage choosen
@@ -95,8 +91,7 @@ function Clicked(item) {
     if (ExtraStorageCost.innerText != "180") {
       ExtraStorageCost.innerText = "180";
     }
-    CalculateTotal(180);
-    // passing the price for adding in total
+    CalculateTotal();
   }
 
   // Checking if FREE delivery choosen
@@ -104,8 +99,7 @@ function Clicked(item) {
     if (ExtraDeliveryCost.innerText != "0") {
       ExtraDeliveryCost.innerText = "0";
     }
-    CalculateTotal(0);
-    // passing the price for adding in total
+    CalculateTotal();
   }
 
   // Checking if Early delivery choosen, $20 will be added
@@ -113,14 +107,14 @@ function Clicked(item) {
     if (ExtraDeliveryCost.innerText != "20") {
       ExtraDeliveryCost.innerText = "20";
     }
-    CalculateTotal(20);
-    // passing the price for adding in total  
+    CalculateTotal();
   }
 
   if (item == "Promo") {
     const code = PromoInput.value.toLowerCase();
-    console.log(code);
+  // Checking if the code is valid or not
     if (code == "stevekaku") {
+      // passing the price for adding in total
       CalculateTotal("applied");
     }
     PromoInput.value = "";
